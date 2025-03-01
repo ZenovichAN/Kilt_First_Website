@@ -1,0 +1,54 @@
+.container-block4-general {
+  width: 1400px;
+  height: 419px;
+  display: grid;
+  grid-template-columns: repeat(2, 700px);
+  grid-template-rows: 370px 48px;
+  border: solid 1px #6f6f6f;
+  margin-left: 10px;
+  margin-top: 81px;
+}
+
+.block-left-image {
+  border: solid 1px #6f6f6f;
+  width: 445px;
+  height: 350px;
+  background: url(/images/Image1-block-four-general.png);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.image-left {
+  border: solid 1px #6f6f6f;
+}
+
+.image-right {
+  border: solid 1px #6f6f6f;
+}
+
+.block-right-image {
+  border: solid 1px #6f6f6f;
+  width: 445px;
+  height: 350px;
+  background: url(/images/Image2-block-four-general-Page.png);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.block-left-bottom {
+  border: solid 1px #6f6f6f;
+}
+.block-left-bottom h2 {
+  font-size: 20px;
+  margin-left: 11px;
+  margin-top: 12px;
+}
+
+.block-right-bottom {
+  border: solid 1px #6f6f6f;
+}
+.block-right-bottom h2 {
+  font-size: 20px;
+  margin-left: 11px;
+  margin-top: 12px;
+}

@@ -5,38 +5,43 @@
   grid-template-columns: repeat(2, 700px);
   grid-template-rows: 370px 48px;
   border: solid 1px #6f6f6f;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 81px;
 }
 
-.block-left-image {
+.block-left-center {
   border: solid 1px #6f6f6f;
-  width: 445px;
-  height: 350px;
-  background: url(/images/Image1-block-four-general.png);
-  margin-left: 10px;
-  margin-top: 10px;
+  width: 700px;
+  height: 370px;
 }
 
 .image-left {
+  width: 445px;
+  height: 350px;
+  margin-left: 10px;
+  margin-top: 10px;
   border: solid 1px #6f6f6f;
+  background: url(/images/Image1-block-four-general.png) no-repeat;
+}
+
+.block-right-center {
+  border: solid 1px #6f6f6f;
+  width: 700px;
+  height: 370px;
 }
 
 .image-right {
-  border: solid 1px #6f6f6f;
-}
-
-.block-right-image {
-  border: solid 1px #6f6f6f;
   width: 445px;
   height: 350px;
-  background: url(/images/Image2-block-four-general-Page.png);
   margin-left: 10px;
   margin-top: 10px;
+  border: solid 1px #6f6f6f;
+  background: url(/images/Image2-block-four-general-Page.png) no-repeat;
 }
 
 .block-left-bottom {
   border: solid 1px #6f6f6f;
+  background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-left-bottom h2 {
   font-size: 20px;
@@ -46,6 +51,7 @@
 
 .block-right-bottom {
   border: solid 1px #6f6f6f;
+  background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-right-bottom h2 {
   font-size: 20px;

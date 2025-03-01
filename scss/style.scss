@@ -1,0 +1,111 @@
+// @font-face {
+//     font-family: 'Space Grotesk';
+//     src: url(./fonts/SpaceGrotesk-Regular.woff2) format('woff2');
+//     font-weight: regular;
+//     font-style: normal;
+//     font-display: swap;
+
+// }
+
+// global variebles
+:root {
+  --color-dark: #000000;
+  --color-light: #F0F0F0;
+  --color-gray: #DEDEDE;
+  --color-dark-gray: #D5D5D5;
+
+  --border: 1px solid #6F6F6F;
+
+  --font-famili-base: 'Space Grotesk', 'sans-serif';
+
+  --container-width: 1440px;
+  --container-padding-x: 20px;
+
+}
+
+body {
+  font-family: var(--font-famili-base);
+  
+  
+}
+
+//  .container{
+//   max-width: calc(var(--container-width) + var(er-padding-x) * 2);
+//   margin-inline: auto;
+//   padding-inline: var(--container-padding-x);
+//  }
+.wrapper {
+  width: 1440px;
+  height: 3521px;
+  margin: 0 auto;
+  background-color: var(--color-dark-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  text-transform: uppercase;
+
+
+}
+
+h1 {
+  font-size: 98px;
+  // margin-top: -15px; 
+  line-height: 0.85em; //интерлиньяж регулирую
+}
+
+a {
+  color: var(--color-dark); //заменил цвет ссылок
+}
+
+.header {
+  display: flex;
+  max-width: 1389px;
+  max-height: 166px;
+  //   // justify-content: space-between;
+  //   // align-items: center;
+  //   // column-gap: 20px;
+  // border: solid 1px black;
+  margin-left: 31px;
+  padding-top: 15px;
+  line-height: 1.1em; //интерлиньяж регулирую
+}
+
+.header-menu {
+  max-width: 105px;
+  max-height: 120px;
+  // border: solid 1px black;
+
+  .header-menu-list {
+    font-size: 12px;
+
+
+  }
+
+  // .header-menu-link {
+  //   text-decoration: none;
+  //   text-transform: uppercase;
+  // }
+  //   // letter-spacing: 2px;
+  margin-left: 231px;
+}
+
+.header-info {
+  width: 45px;
+  height: 45px;
+  font-size: 12px;
+  // border: solid 1px black;
+  text-transform: uppercase;
+  margin-left: 131px;
+
+
+  .header-info-link {
+    font-size: 12px;
+    text-decoration: none;
+  }
+}

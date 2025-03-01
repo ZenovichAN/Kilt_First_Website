@@ -1,0 +1,145 @@
+.container-block2-general {
+  display: grid;
+  grid-template-columns: repeat(6, 233px);
+  grid-template-rows: 81px 369px 369px;
+  border: solid 1px #6F6F6F;
+  background-color: var(--color-dark-gray);
+  margin-left: 20px;
+  margin-top: 120px;
+  margin-right: 20px;
+}
+.container-block2-general .grid-0-head {
+  grid-column: span 6;
+  grid-row: span 1;
+  border-bottom: solid 1px #6F6F6F;
+  background: url(/images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
+}
+.container-block2-general .grid-0-head h2 {
+  font-size: 48px;
+  margin-left: 11px;
+  margin-top: 20px;
+}
+.container-block2-general .grid-1 {
+  border: solid 1px #6F6F6F;
+  border-left: none;
+  border-top: none;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-1 .grid-1-image {
+  background: url(/images/Image1-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-1 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-1 .grid-1-title {
+  border-top: solid 1px #6F6F6F;
+}
+.container-block2-general .grid-2 {
+  display: grid;
+  grid-template: auto 50px/233px;
+  background: url(/images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
+}
+.container-block2-general .grid-4 {
+  border: solid 1px #6F6F6F;
+  border-top: none;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-4 .grid-4-image {
+  background: url(/images/Image2-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-4 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-4 .grid-4-title {
+  border-top: solid 1px #6F6F6F;
+}
+.container-block2-general .grid-6 {
+  border: solid 1px #6F6F6F;
+  border-top: none;
+  border-right: none;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-6 .grid-6-image {
+  background: url(/images/Image3-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-6 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-6 .grid-6-title {
+  border-top: solid 1px #6F6F6F;
+}
+.container-block2-general .grid-8 {
+  border: solid 1px #6F6F6F;
+  border-right: none;
+  border-bottom: none;
+  background: url(/images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-8 .grid-8-image {
+  background: url(/images/Image4-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-8 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-8 .grid-8-title {
+  border-top: solid 1px #6F6F6F;
+}
+.container-block2-general .grid-9 {
+  border: solid 1px #6F6F6F;
+  border-bottom: none;
+  border-left: none;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-9 .grid-9-image {
+  background: url(/images/Image5-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-9 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-9 .grid-9-title {
+  border-top: solid 1px #6F6F6F;
+}
+.container-block2-general .grid-11 {
+  border: solid 1px #6F6F6F;
+  border-bottom: none;
+  display: grid;
+  grid-template: auto 50px/233px;
+}
+.container-block2-general .grid-11 .grid-11-image {
+  background: url(/images/Image6-block-two-general-Page.png);
+  margin: 10px 10px;
+}
+.container-block2-general .grid-11 h2 {
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+}
+.container-block2-general .grid-11 .grid-11-title {
+  border-top: solid 1px #6F6F6F;
+}

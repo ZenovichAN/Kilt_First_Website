@@ -9,7 +9,7 @@
     margin-top: 81px;
 }
 .block-left-center {
-    border: solid 1px #6f6f6f;
+    border-right: solid 1px #6f6f6f;
     width: 700px;
     height: 370px;
    
@@ -27,7 +27,7 @@
 
 
 .block-right-center {
-    border: solid 1px #6f6f6f;
+    // border-right: solid 1px #6f6f6f;
     width: 700px;
     height: 370px;
    
@@ -44,6 +44,7 @@
 
 .block-left-bottom {
     border: solid 1px #6f6f6f;
+    border-left: none;
     h2{
         font-size: 20px;
         margin-left: 11px;
@@ -53,6 +54,8 @@
 }
 .block-right-bottom {
     border: solid 1px #6f6f6f;
+    border-left: none;
+    border-right: none;
     h2{
         font-size: 20px;
         margin-left: 11px;

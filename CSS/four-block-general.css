@@ -10,7 +10,7 @@
 }
 
 .block-left-center {
-  border: solid 1px #6f6f6f;
+  border-right: solid 1px #6f6f6f;
   width: 700px;
   height: 370px;
 }
@@ -25,7 +25,6 @@
 }
 
 .block-right-center {
-  border: solid 1px #6f6f6f;
   width: 700px;
   height: 370px;
 }
@@ -41,6 +40,7 @@
 
 .block-left-bottom {
   border: solid 1px #6f6f6f;
+  border-left: none;
   background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-left-bottom h2 {
@@ -51,6 +51,8 @@
 
 .block-right-bottom {
   border: solid 1px #6f6f6f;
+  border-left: none;
+  border-right: none;
   background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-right-bottom h2 {

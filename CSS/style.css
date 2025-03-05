@@ -15,7 +15,7 @@ body {
 
 .wrapper {
   width: 1440px;
-  height: 3521px;
+  height: 3500px;
   margin: 0 auto;
   background-color: var(--color-dark-gray);
 }

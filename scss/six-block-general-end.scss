@@ -1,0 +1,144 @@
+.six-block-footer {
+    display: grid;
+    grid-template-columns: repeat(6, 233px);
+    grid-template-rows: 74px 60px 45px;
+    border: var(--border);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 120px;
+    // *{
+    //     border: var(--border);
+    // }
+}
+.six-block-item1 {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+.six-block-item2 {
+    border-left: var(--border);
+    border-right: var(--border);
+}
+
+.six-block-item3 {
+    
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+    border-right: var(--border);
+}
+
+.six-block-item4 {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.six-block-item5 {
+    border-left: var(--border);
+}
+
+.six-block-item6 {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+    border-left: var(--border);
+}
+
+.six-block-item7 {
+    border-top: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item8 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item9 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item10 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item11 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item12 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item13 {
+    border: var(--border);
+    grid-column: 1 / span 2;
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+
+
+.six-block-item15 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item16 {
+    border: var(--border);
+    padding-left: 10px;
+    padding-top: 15px;
+    h2{
+        font-size: 12px;
+    }
+}
+
+.six-block-item17 {
+    border: var(--border);
+    grid-column: 5 / span 2;
+    // align-content: center;
+    
+}
+
+.twitter {}
+
+.youtube {}
+
+.google {}
+

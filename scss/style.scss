@@ -13,20 +13,14 @@
   --color-light: #F0F0F0;
   --color-gray: #DEDEDE;
   --color-dark-gray: #D5D5D5;
-
   --border: 1px solid #6F6F6F;
-
   --font-famili-base: 'Space Grotesk', 'sans-serif';
-
   --container-width: 1440px;
   --container-padding-x: 20px;
-
 }
 
 body {
   font-family: var(--font-famili-base);
-  
-  
 }
 
 //  .container{
@@ -34,11 +28,12 @@ body {
 //   margin-inline: auto;
 //   padding-inline: var(--container-padding-x);
 //  }
+
 .wrapper {
   width: 1440px;
   height: 3500px;
   margin: 0 auto;
-  background-color: var( --color-gray);
+  background-color: var(--color-gray);
 }
 
 h1,
@@ -49,49 +44,34 @@ h5,
 h6 {
   font-weight: 400;
   text-transform: uppercase;
-
-
 }
 
 h1 {
   font-size: 98px;
-  // margin-top: -15px; 
   line-height: 0.85em; //интерлиньяж регулирую
 }
 
 a {
-  color: var(--color-dark); //заменил цвет ссылок
+  color: var(--color-dark);
 }
 
 .header {
   display: flex;
   max-width: 1389px;
   max-height: 166px;
-  //   // justify-content: space-between;
-  //   // align-items: center;
-  //   // column-gap: 20px;
-  // border: solid 1px black;
   margin-left: 31px;
   padding-top: 15px;
-  line-height: 1.1em; //интерлиньяж регулирую
+  line-height: 1.1em;
 }
 
 .header-menu {
   max-width: 105px;
   max-height: 120px;
-  // border: solid 1px black;
 
   .header-menu-list {
     font-size: 12px;
-
-
   }
 
-  // .header-menu-link {
-  //   text-decoration: none;
-  //   text-transform: uppercase;
-  // }
-  //   // letter-spacing: 2px;
   margin-left: 231px;
 }
 
@@ -99,10 +79,8 @@ a {
   width: 45px;
   height: 45px;
   font-size: 12px;
-  // border: solid 1px black;
   text-transform: uppercase;
   margin-left: 131px;
-
 
   .header-info-link {
     font-size: 12px;

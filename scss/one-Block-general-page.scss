@@ -7,8 +7,7 @@
     max-width: 1400px;
     max-height: 623px;
     border: solid 1px #6F6F6F;
-    margin-left: 20px;
-
+    margin-inline: 20px;
 }
 
 .main-presentasion-image {
@@ -20,7 +19,6 @@
 }
 
 .info {
-
     width: 466px;
     height: 310px;
     border-left: solid 1px #6F6F6F;
@@ -29,7 +27,6 @@
     padding-right: 10px;
 
     h2 {
-
         font-size: 48px;
     }
 
@@ -43,7 +40,9 @@
     height: 310px;
     border-left: solid 1px #6F6F6F;
     background: url(/images/Line-gorizontal-block-tree-general-Page.png) 0 0 no-repeat,
-                url(/images/Left-Line-block-one-general-Page.png) no-repeat,
-                url(/images/Right-Line-block-one-general-Page.png) right no-repeat,
-                url(/images/Line-vertikal-block-tree-general-Page.png) center no-repeat;
-}// добавил декоративные прерывистые картинки в первый блок
+        url(/images/Left-Line-block-one-general-Page.png) no-repeat,
+        url(/images/Right-Line-block-one-general-Page.png) right no-repeat,
+        url(/images/Line-vertikal-block-tree-general-Page.png) center no-repeat;
+}
+
+// добавил декоративные прерывистые картинки в первый блок

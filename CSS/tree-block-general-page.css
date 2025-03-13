@@ -54,17 +54,7 @@
   border-right: solid 1px #6f6f6f;
   display: grid;
 }
-.container-block3-general .item4-left .item4-left-image h2 {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 13px;
-}
-.container-block3-general .item4-left h2 {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 13px;
-}
-.container-block3-general .item5-right h2 {
+.container-block3-general .item4-left .item5-right h2, .container-block3-general .item5-right .item4-left h2, .container-block3-general .item4-left h2, .container-block3-general .item4-left .item4-left-image h2 {
   font-size: 20px;
   margin-left: 10px;
   margin-top: 13px;

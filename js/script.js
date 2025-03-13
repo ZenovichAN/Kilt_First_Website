@@ -245,8 +245,8 @@ console.log(user);
 delete user.adminName;
 delete user['is developer'];
 
-const propName = prompt(`Enter name`);
-const propValue = prompt(`your name is ${propName}`);
+//const propName = prompt(`Enter name`); //закоментил чтобы окно не всплывало
+//const propValue = prompt(`your name is ${propName}`);
 
 const user2 = {
     [propName]: propValue,

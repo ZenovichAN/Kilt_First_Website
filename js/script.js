@@ -248,10 +248,10 @@ delete user['is developer'];
 //const propName = prompt(`Enter name`); //закоментил чтобы окно не всплывало
 //const propValue = prompt(`your name is ${propName}`);
 
-const user2 = {
-    [propName]: propValue,
-}
-console.log(user2);
+// const user2 = {
+//     [propName]: propValue,
+// }
+// console.log(user2);
 
 //проверить наличие свойства в обьекте
 console.log('name' in user); //выдает true если свойство есть в обьекте
@@ -263,3 +263,86 @@ for (let key in user) {
     console.log(key);
     console.log(user[key]);
 }
+
+// корирование обьектов
+const obj1 = { name: 'Anton' }
+const obj2 = Object.assign({}, obj1); // куда копировать, что копировать
+// получаем полную независимую копию obj1
+
+// можно копировать обьект с помощю оператора расширения
+const obj3 = { ...obj1 }; // три точки это и есть оператор расширения
+// тоже независимая копия обьекта
+
+
+//ешще один пример по обьединению обьектов для закрепления
+
+const obj4 = { name: 'Anton' };
+const obj5 = { age: 41 };
+const obj6 = { name: 'Anton', isDeveloper: true, }
+
+const userObj = ({}, obj4, obj5, obj6);
+
+//или так const user = { ...obj4, ...obj5, ...obj6};
+
+console.log('user:', userObj);
+// это обычное обьединение обьектов, но оно не точное. при вложенных обьектак в копируемых обьектах, копируется последнее вложение. в соответствии с очередью
+
+// чтобы получить какой-то обьект или его элемент console.log(user.какой-то обьект в обьекте.элемент вложенного обьекта);
+//но если мы хотим свойство которое было обциональным? тогда ошибка и невыполнение дольнейшего кода.
+// можно поправить используя обциональную цепочку (?.) console.log(user.какой-то обьект в обьекте?.свойство вложенного обьекта);
+
+
+
+
+/*  синтаксис деструктурирующего присваивания. */
+
+const superUser = { myName: 'Anton', age: 41, isDeveloper: true, };
+// хотим получить каждый ключ и свойство этого обьекта
+
+// const name = superUser.name;
+// const age = superUser.age;
+// const isDeveloper = superUser.isDeveloper;
+
+//можно сделать это более просто с помощю деструктурирующего присваивания
+
+const { myName, age, isDeveloper,} = superUser; //единой инструкцией вытащим одноименные переменные
+
+console.log('name:', myName);
+console.log('age:', age);
+console.log('isDeveloper:', isDeveloper);
+//достать таким образом не существующее свойство обьекта не получится, в консоле будет ключ с undefined
+
+// такой синтаксис можно сипользовать и с массивами
+
+//например есть два обьекта
+const userA = {
+    name: 'Anton',
+}
+
+const admin = {
+    name: 'Boss',
+}
+
+//теперь нужно, например, вытащить их в один обьект. Появится ошибка т.к. не может быть два одинаковых ключа в обьекте
+
+const {name: nameUser} = userA; // в таком случае можно поставить двоеточие и переназвать ключи прямо в полете
+const {name: nameAdmin} = admin;
+// можно таким образом ставить свойство по умолчанию const {name = 'не указано'} = userA;
+// можно истользовать все сразу const {name: nameUser = 'не указано'} = userA;
+
+
+
+/** остаточные или rest параметры */
+ const logUser = (user) => {
+    const {name, age, city, ...otherInfo} = user; // нужно добавить ...otherInfo чтобы увидеть дополнительную информацию
+
+    console.log(`Name: ${name} Age: ${age} City: ${city}`)
+    console.log('дополнительная информация:', otherInfo); // чтобы увидеть дополнительную информацию
+ }
+
+ logUser({name: 'Anton', age: 41, city: 'Moskov', company: 'Google', jobPost: 'Frontend developer',})
+
+
+ /** ключевое слово this */
+
+ // дает доступ к ключевому контексту выполнения. если this  прологировать в консоле, то увидим ДОХРЕНА параметров

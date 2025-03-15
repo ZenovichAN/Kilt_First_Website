@@ -62,16 +62,16 @@
         }
     }
 
+    %font-size-h2 {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 13px;
+    }
+
     .item4-left {
         border-top: solid 1px #6f6f6f;
         border-right: solid 1px #6f6f6f;
         display: grid;
-
-        %font-size-h2 {
-            font-size: 20px;
-            margin-left: 10px;
-            margin-top: 13px;
-        }
 
         .item4-left-image {
             h2 {

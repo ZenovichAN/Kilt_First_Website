@@ -346,3 +346,27 @@ const {name: nameAdmin} = admin;
  /** ключевое слово this */
 
  // дает доступ к ключевому контексту выполнения. если this  прологировать в консоле, то увидим ДОХРЕНА параметров
+ console.log('this global',this);
+
+ // в зависимости где вызывается this  результат будет разным. Если вызвать в глобальной области видимости или теле функции, которая находится в глобальном контексте, this будет ссылаться на одит и тот же обьект window.
+
+ const userThis = {
+    name: 'Anton',
+    age: 41,
+    logThis: function() {
+        console.log('This в теле метода обьекта userThis:', this)
+    },
+ }
+  
+ userThis.logThis();
+
+
+ // const userThis = {
+//     name: 'Anton',
+//     age: 41,
+//     logThis: () => {                     // в стрелочных функциях this  всегда указывает на глобальный контекст
+//         console.log('This в теле метода обьекта userThis:', this)
+//     },
+//  }
+  
+//  userThis.logThis();

@@ -38,15 +38,16 @@
   background: url(/images/Image2-block-four-general-Page.png) no-repeat;
 }
 
+h2 {
+  font-size: 20px;
+  margin-left: 11px;
+  margin-top: 12px;
+}
+
 .block-left-bottom {
   border: var(--border);
   border-left: none;
   background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
-}
-.block-left-bottom h2 {
-  font-size: 20px;
-  margin-left: 11px;
-  margin-top: 12px;
 }
 
 .block-right-bottom {
@@ -54,9 +55,4 @@
   border-left: none;
   border-right: none;
   background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
-}
-.block-right-bottom h2 {
-  font-size: 20px;
-  margin-left: 11px;
-  margin-top: 12px;
 }

@@ -42,16 +42,15 @@
 
 }
 
+h2 {
+    font-size: 20px;
+    margin-left: 11px;
+    margin-top: 12px;
+}
+
 .block-left-bottom {
     border: var(--border);
     border-left: none;
-
-    h2 {
-        font-size: 20px;
-        margin-left: 11px;
-        margin-top: 12px;
-    }
-
     background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 
@@ -59,12 +58,5 @@
     border: var(--border);
     border-left: none;
     border-right: none;
-
-    h2 {
-        font-size: 20px;
-        margin-left: 11px;
-        margin-top: 12px;
-    }
-
     background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }

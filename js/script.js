@@ -488,3 +488,108 @@ console.log(typeof roundedPrice); //string
  */
 
 /** все эти методы не мутируют исходную строку, не меняют исходную сущность */
+
+
+/** МАССИВЫ */
+
+// массив это коллекция и элементы хранятся в нем в порядке котором их поместили туда
+ const arr = ['hello', 100, true, {name: 'Anton'}, ()=> console.log('hi'), ['true1', 'true2', 'true3'],];
+
+ console.log(arr[3].name);
+ console.log(arr[3]['name']); // одно и тоже
+ arr[4]();
+ console.log(arr[5][1]);
+
+
+ // многомерный массив
+
+ const matrix = [
+    [1, 2, 3], 
+    [4, 5, 6], 
+    [7, 8, 9]
+ ];
+ console.log(matrix[2][2]);
+
+
+ // можно поменять элемент и также добавить
+ matrix[2][2] = 'hey epta';
+ console.log(matrix);
+
+ // arr.length - можно ужнать не только длину, но и обратиться к последнему элементу
+ console.log(matrix.length-1);// индекс всегда будет меньше длины массива на 1. Начало отсчета для массива с 0, длина через запрос 3
+ //есть более удобный способ узнать длину массива, получить доступ к элементу массива с конца .at(-1);
+
+ console.log(arr.at(-1));
+
+
+ matrix.push('wow');// добавить элемент в конец массива
+console.log(matrix);
+
+matrix.unshift('anton');// добавить элемент в начало массива. ДОБАВЛЯТЬ ИЛИ УДАЛЯТЬ В НАЧАЛЕ МАССИВА ЭТО ДОРОГО ДЛЯ ПРОИЗВОДИТЕЛЬНОСТИ
+console.log(matrix);
+
+
+matrix.pop();// удалить элемент с конца массива
+matrix.shift(); //удаляет элемент с начала массива
+
+const arr2 = ['hello', 100, true];
+console.log(arr2.toString());// преобразование массива в строку
+// но чаще применяют метод .join() в аргументах принимает строку которая будет являться разделителем элементов при приобразовании из в строку
+console.log(arr2.join(',   '));
+
+//поведение при копировании у массива как у обьекта
+//чтобы скопировать массив можно прогнать его через цикл
+
+const arr3 = ['a', 's', 'd'];
+const arr4 = [];
+
+for (let i = 0; i < arr3.length; i++){
+    arr4.push(arr3[i])
+};
+
+console.log(arr3);
+console.log(arr4);
+
+//делать копирование в ручную не здорово и поэтому есть расширение спред [...arr]
+const arr5 = [...arr3];
+console.log(arr5);
+
+const arr6 = arr3.slice();// получаем как бы вырезанную копию всех значений, но можно вырезать и часть .slice(0, 2);
+console.log(arr6);
+
+
+const totalArr = [...arr3, ...matrix];//обьединить массивы
+console.log(totalArr);
+//так же обьединить можно с помощью специального метода  массив1.concat(массив2) or массив1.concat(массив2, массив3, массив4....)
+const totalArr2 = arr3.concat(matrix);
+
+/**массивы как и обьекты нельзя сравнивать на прямую. сравнивать по ссылке */
+
+const arr0 = ['s', 'f', 'g',];
+const arr9 = ['s', 'f', 'a',];
+
+const areArraysEquals = (arrey1, array2) => {
+    if (arrey1.length !== array2.length) {
+        return false;
+    }
+    for(let i=0;i<arrey1.length; i++){
+        const value1 = arrey1[i];
+        const value2 = array2[i];
+
+        const arrValuesArrey = Array.isArray(value1) && Array.isArray(value2);//является ли проверяемая сущност массивом
+        if (arrValuesArrey){
+            if(!areArraysEquals(value1, value2)){
+                return false;
+            } else{
+                continue // перейти к след. итерации цикла
+            }
+        }
+
+        if(value1 !== value2){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(areArraysEquals(arr0,arr9));

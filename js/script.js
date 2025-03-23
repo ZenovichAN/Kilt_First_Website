@@ -765,3 +765,130 @@ const sortNumbers = [...numbers].sort((a, b) => a-b)// берет по два ч
 console.log(
     sortNumbers
 )
+
+
+/** КОЛЛЕКЦИИ */
+
+//до этого перебирали обьект через for in
+ const user = {
+    name: 'Anton', 
+    age: 35,
+    city: 'Novorossiysk',
+ }
+ for (const key in user){
+    console.log('Имя свойства:', key)
+    console.log('Значение свойства:', user[key])
+ }
+
+ //из обьекта можно получить массив ключей
+ const userKeys = Object.keys(user)
+
+ console.log('userKeys:', userKeys)
+
+ //можно получить массив значений из обьекта
+
+const userValues = Object.values(user)
+console.log('userValues:', userValues)
+
+//можно получить обьект в виде массива, каждый элемент будет массивом
+const userEntries = Object.entries(user)
+console.log('userEntries:', userEntries)
+//преобразование обьекта в другой с допами
+ const userEntriesFormatted = userEntries.map(([key, value]) => {
+    return [key.toUpperCase(), `--${value}--`]
+ })
+
+ console.log('userEntriesFormatted:', userEntriesFormatted)
+
+ //чтобы обратно получить обьект
+ const userFormatted2 = Object.fromEntries(userEntriesFormatted)
+ console.log('userFormatted2:', userFormatted2)
+
+
+ //структура map коллекция. в методе прописываются добавляемые пары(ключ и значение)
+ const data2 = new Map([
+    [1, "один как цифра"],
+    ['1', 'Один как строка']
+ ])
+
+ //чтобы добавить элемен поле обьявления, динамически
+ data2.set(1, "один как цифра")
+ data2.set('1', 'Один как строка')
+ data2.set('name', 'имя')
+
+ //чтобы получить данные по ключю из коллекции
+console.log(data2.get(1))
+console.log(data2.get('1'))
+
+//чтобы проверить существует ли значение в коллекции по определенному ключу. Проверяет только наличие ключа без привязанного к нему значения
+console.log(data2.has('name'))
+
+//чтобы удальть элемент из коллекции
+data2.delete('name')
+console.log(data2.has('name'))
+
+//чтобы полностью очистить всю коллекцию целиком
+data2.clear()
+console.log('data2', data2)
+
+//у map() есть свойство size (не метод, без скобок). возвращает размер (количество пар)
+console.log(data2.size)
+
+//чтобы перебрать коллекцию for of
+data2.set('age', 35)
+data2.set('1', 'Один как строка')
+data2.set('name', 'имя')
+
+for (const key of data2.keys()){
+    console.log('key:', key)
+}
+
+ for (const value of data2.values()){
+    console.log('value:', value)
+ }
+
+ for (const entry of data2.entries()){
+    console.log('entry:', entry)
+ }
+
+ //есть у коллекций свой forEach, порядок в колбеке разный
+
+data2.forEach((value, key, map) => { //value - текущее значение пары в коллекции, key - ключ, map - ссылка на саму коллекцию
+    console.log('value:', value)
+    console.log('key:', key)
+    console.log('map:', map)
+})
+
+//чтобы преобразовать обьекты в коллекцию
+ const map = new Map(Object.entries(user))
+
+ map.forEach((value, key) => {
+    console.log(`${key}: ${value}`)
+ })
+ 
+ //чтобы обратно преобразовать мар коллекцию обратно в обьект
+  const obj = Object.fromEntries(map)
+  console.log(obj)
+
+
+  /** Еще одна структура данныйх (коллекция) SET которая хранит только значения */
+//каждое значение может быть только в единственном экземпляре, дубликаты игнорируются
+  const set = new Set([1,2,2,2,2,3])//прологируем массив с сущностями. на выходе получим [1,2,3]
+  console.log(set)
+
+  //чтобы добавить элемент в коллекцию set
+  set.add('Anton')
+
+  //проверить есть ли определенное значение
+  set.has('Anton')
+  
+  //удаление
+  set.delete('Anton')
+
+  //размер
+  set.size
+
+  //очистить
+  set.clear()
+
+  //для перебора те же методы что и для Map()

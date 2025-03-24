@@ -892,3 +892,95 @@ data2.forEach((value, key, map) => { //value - текущее значение �
   set.clear()
 
   //для перебора те же методы что и для Map()
+
+
+
+
+
+
+
+  /** JSON */
+
+  // JSON.stringify() - преобразует js обьект в JSON чтобы эти данные можно было отправлять на сервер. Если в обьекте будум методы или значения будут undefined, то JSON не будет их учитывать
+  const userDataString = JSON.stringify(user)
+  console.log(userDataString)
+
+  //чтобы обратно преобразовать JSON to JS
+  const parseUserData = JSON.parse(userDataString)
+  console.log(parseUserData)
+
+
+
+
+
+
+
+
+  /** Классы */
+  // многофункциональный шаблон для создания обьектов
+  class Student {
+
+    planet = 'World';
+    coutry = 'russia';
+    region = 'south';
+
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    logAge(){
+        console.log(this.age)
+      
+    }
+  }
+  //чтобы создать обьект из этого шаблона
+  const firstStudent = new Student('Anton', 35)
+  const secondStudent = new Student()
+
+  console.log('firstStudent',firstStudent)
+  console.log('secondStudent',secondStudent)
+ 
+  firstStudent.logAge()
+
+
+
+  //get- получать,  set-устанавливать
+
+class Getset{
+
+    #city = null;
+
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+        
+
+    }
+
+    set city(value) {
+
+const firstLatteer = value[0].toUpperCase()
+const fromSecondLetter = value.slice(1).toLowerCase()
+
+        this.#city = `${firstLatteer}${fromSecondLetter}`;
+//нижнее подчеркивание в начале свойства т.к. принято выделять свойства или методы которые в рамках обьекта или класса
+
+
+    }
+
+    get city(){
+        return `г. ${this.#city}`;
+    }
+
+    _someSecretAction() {
+        //со всеми этими подчеркиваниями это чисто правило хорошего тона, можно вызвать и за предалеми класса, но не стоит. Лучше обьявить переменную в классе с приватным # вместо нижнего подчеркивания
+    }
+
+}
+
+const FirstGetSet = new Getset('Anton', 30)
+
+FirstGetSet.city = 'gnom'
+
+console.log(FirstGetSet.city)

@@ -984,3 +984,47 @@ const FirstGetSet = new Getset('Anton', 30)
 FirstGetSet.city = 'gnom'
 
 console.log(FirstGetSet.city)
+
+
+
+/** ОТЛОЖЕННЫЕ И РЕГУЛЯРНЫЕ ВЫПОЛНЕНИЯ КОДА */
+
+//гребанные рандомные всплывающие окна
+
+//таймер. отложенная функция
+setTimeout(() => {}, 2000) //() => {} - функция которая будет выполняться спустя какое-то время. можно записать (function(){}) или вообще передать по ссылке const doSomething = () => {};  setTimeout(doSomething, 2000);
+
+const timerID = setTimeout(() => {
+    alert('Спустя 4 сек')
+}, 4000)
+
+
+//отменить какой-нибудь таймер
+
+clearTimeout(timerID)
+
+
+//если есть желание выполнять какой-нибудь код постоянно, например раз в секунду
+const intervalID = setInterval(() => {
+    console.log('HI')
+}, 1000)
+
+setTimeout(() => {
+    clearInterval(intervalID)
+}, 5000)
+
+//clearInterval(intervalID) - очитстить таймер
+
+//setrTimeout работает постоянно (на пролом). чтобы были задержки между выполнениями можно один таймер вложить в другой
+
+setTimeout(function logMessage(){
+    alert('Message 1 time in minut')
+
+    setTimeout(logMessage, 1000)
+},1000)
+
+
+// если поставить 0 или ничего в аргумент setTimeout вместь времени, то задержка будет один фиг т.к. браузер настроен на задержку 0.4 секунды.
+
+
+/** обработка ошибок */

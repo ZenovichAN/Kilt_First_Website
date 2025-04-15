@@ -2,82 +2,72 @@
 
 
 
+/** ДЕЛЕГИРОВАНИЕ СОБЫТИЙ, ПОВЕДЕНИЕ БРАУЗЕРА ПО УМОЛЧАНИЮ, ГЕНРАЦИЯ СОБСТВЕННЫХ СОБЫТИЙ */
 
 
+//Здорово но нифига не понятно. Пересмотреть 33 видео, примеры анимации его сайта
 
+/** СОБЫТИЯ МЫШИ И УКАЗАТЕЛЯ, DRAG AND DROP КОМПОНЕНТ */
 
-
-/** ОБРАБОТКА СОБЫТИЙ, ВСПЛЫТИЕ И ПОГРУЖЕНИЕ */
-
-
-const logAllEvents = () => {
-    console.log(
-        Object
-            .keys(window)
-            .filter((key) => /^on/.test(key))
-            .map((eventName) => eventName.slice(2))
-    )
-}
-
-logAllEvents()
-
-//каждое событие исходит от дом элемента, который его вызвал или окна браузера
-/** примеры событий:
- * click, scroll, resize, keydown, keyup, focus, blur, change, input, submit, load, unload, error
- * mouseenter, mouseleave, mousemove, mouseover, mouseout, contextmenu, dblclick, drag, drop, wheel
- * touchstart, touchmove, touchend, touchcancel, pointerdown, pointerup, pointermove, pointerenter, pointerleave, pointercancel
- * transitionend, animationend, animationstart, animationiteration
- */
-
-// несколько способов навесить обработчик событий на элемент
-// const button = document.querySelector('.button')
-// const input = document.querySelector('.input')
-// const div = document.querySelector('.div')
-// const form = document.querySelector('.form')    
-
-
-// 1. встроенный обработчик событий в HTML - не рекомендуется использовать, так как это нарушает принцип разделения логики и разметки
-// <button type="button" onclick="alert('Hello')">Click me</button> - встроенный обработчик событий в HTML
-// <button type="button" id="button">Click me</button> - встроенный обработчик событий в HTML
-
-// 2. метод addEventListener - рекомендуется использовать, так как это позволяет разделить логику и разметку
-
- const button = document.querySelector('.button')
-
-button.addEventListener('click', (event) => {
-    alert('Hello')
-    event.which //код клавиши, которая была нажата (для событий клавиатуры)
+const btn = document.querySelector('.btn');
+btnElement.addEventListener('mousemove', (event) => {
+    console.log('курсор навели на элемент', event.target); //event.target - элемент на который навели курсор
+    console.log('координаты курсора', event.clientX, event.clientY); //координаты курсора относительно окна браузера
+    console.log('координаты курсора', event.pageX, event.pageY); //координаты курсора относительно страницы
+    console.log('координаты курсора', event.screenX, event.screenY); //координаты курсора относительно экрана   
     
-})
+}  )     
 
-//or
-
-// button.onclick = () => {
-//     alert('Hello again')
-// }
-
-
-//способ удаления обработчика событий
-// button.removeEventListener('click', () => {
-//     alert('Hello again')
+btnElement.addEventListener('mouseout', (event) => {
+    console.log('курсор увели с элемент', event.relatedTarget); //event.relatedTarget - элемент на который увели курсор
+    console.log('координаты курсора', event.clientX, event.clientY); //координаты курсора относительно окна браузера    
+    
+}  )  
 
 
+btnElement.addEventListener('mousedown', () => {
+       console.log('mousedown') // нажата кнопка мыши
+    
+}  )  
 
-//всплытие и погружение событий - это механизм, который позволяет обрабатывать события на разных уровнях DOM-дерева.
-// Всплытие - это процесс, при котором событие начинает обрабатываться с самого глубокого элемента и поднимается вверх к родительским элементам.
-// Погружение - это процесс, при котором событие начинает обрабатываться с самого верхнего элемента и опускается вниз к дочерним элементам.
-// В JavaScript события по умолчанию всплывают, но можно использовать параметр capture, чтобы сделать погружение.
+btnElement.addEventListener('mouseup', () => {
+    console.log('mouseup') // отпустили кнопку мыши
+ 
+}  ) 
 
-//.stopPropagation() - останавливает всплытие события
-//.preventDefault() - отменяет действие по умолчанию для события, например, для ссылки или формы
-//.stopImmediatePropagation() - останавливает всплытие события и предотвращает выполнение других обработчиков событий на том же элементе
-//.target - возвращает элемент, на котором произошло событие
-//.currentTarget - возвращает элемент, на котором был установлен обработчик события
-//.bubbles - возвращает true, если событие всплывает, и false, если нет
-//.cancelable - возвращает true, если событие можно отменить, и false, если нет
-//.defaultPrevented - возвращает true, если действие по умолчанию было отменено, и false, если нет
+btnElement.addEventListener('click', () => {
+    console.log('click') // кликнули на кнопку мыши
+ 
+}  ) 
 
-//.eventPhase - возвращает фазу события (1 - захват, 2 - цель, 3 - всплытие)
-//.timeStamp - возвращает время, когда произошло событие в миллисекундах с момента загрузки страницы
-//.type - возвращает тип события (click, mouseover и т.д.)
-//.which - возвращает код клавиши, которая была нажата (для событий клавиатуры)
+btnElement.addEventListener('dblclick', () => {
+    console.log('dblclick') // двойной кликнули на кнопку мыши
+ 
+}  ) 
+
+btnElement.addEventListener('contextmenu', () => {
+    console.log('contextmenu') // правый кликнули на кнопку мыши
+ 
+}  ) 
+
+
+//события указателя:
+// pointerdown - нажата любая кнопка мыши или сенсорный экран
+// pointerup - отпущена любая кнопка мыши или сенсорный экран       
+// pointermove - перемещение указателя мыши или сенсорного экрана
+// pointerover - указатель мыши или сенсорный экран наведен на элемент
+// pointerout - указатель мыши или сенсорный экран уведен с элемента
+// pointerenter - указатель мыши или сенсорный экран наведен на элемент (внутри элемента)
+// pointerleave - указатель мыши или сенсорный экран уведен с элемента (вне элемента)
+// pointercancel - событие отменено (например, при использовании сенсорного экрана)
+// pointerlockchange - событие блокировки указателя (например, при использовании игры на весь экран)
+// pointerlockerror - ошибка блокировки указателя (например, при использовании игры на весь экран)
+// pointercapture - событие захвата указателя (например, при использовании игры на весь экран)
+// pointerrelease - событие освобождения указателя (например, при использовании игры на весь экран)
+// pointercapturechange - событие изменения захвата указателя (например, при использовании игры на весь экран)
+// pointercaptureerror - ошибка захвата указателя (например, при использовании игры на весь экран)
+// pointercapturecancel - событие отмены захвата указателя (например, при использовании игры на весь экран)
+// pointercapturechange - событие изменения захвата указателя (например, при использовании игры на весь экран)
+// pointercaptureerror - ошибка захвата указателя (например, при использовании игры на весь экран)
+// pointercapturecancel - событие отмены захвата указателя (например, при использовании игры на весь экран)
+// pointercapturechange - событие изменения захвата указателя (например, при использовании игры на весь экран)

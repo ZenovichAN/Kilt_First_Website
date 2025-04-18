@@ -3,110 +3,42 @@
 
 
 
+/** ВАЛИДАЦИЯ ФОРМ */
+
+// валидация формы бывает двух типов:
+// 1. валидация на стороне клиента (в браузере) 
+// 2. валидация на стороне сервера (на сервере)
+// валидация на стороне клиента выполняется с помощью JavaScript и HTML атрибутов
+// валидация на стороне сервера выполняется с помощью PHP и SQL запросов
+// валидация на стороне клиента выполняется перед отправкой формы на сервер
+
+/** КЛИЕНТ-СЕРВЕРНОЕ ВЗАИМОДЕЙСТВИЕ */
+
+//fetch это функция, которая позволяет отправлять запросы на сервер и получать ответы от него
+//fetch(url, options) - url - адрес на который отправляется запрос, options - объект с настройками запроса
 
 
-/** СОБЫТИЯ КЛАВИАТУРЫ */
+//rest api - это архитектурный стиль взаимодействия между клиентом и сервером, который позволяет обмениваться данными в формате JSON
 
-//keydown - нажата клавиша
-//keyup - отпущена клавиша
+//api это набор функций и протоколов, которые позволяют взаимодействовать с программным обеспечением, операционной системой или другим сервисом
 
+//rest api - это интерфейс, который позволяет взаимодействовать с сервером через HTTP запросы (GET, POST, PUT, DELETE) и получать ответы в формате JSON
+//rest api - это способ взаимодействия между клиентом и сервером, который позволяет обмениваться данными в формате JSON
 
-/** ФОКУС, BLUR */
+//для практики можно использовать free rest api, например: https://jsonplaceholder.typicode.com/
+//или https://reqres.in/
 
+//или https://api.github.com/users
+//или https://api.github.com/users/octocat
 
-//focus - элемент получает фокус (например, при клике на него)
-//blur - элемент теряет фокус (например, при клике на другой элемент) 
+fetch('http://localhost:3000/posts')
+      .then(response => response.json())
+      .then(json => console.log(json))
 
-// <input type="text" id="name" placeholder="Имя" required autofocus> такой фокус не поймать в js, т.к. он срабатывает при загрузке страницы, а не при клике на элемент
-
-
-element.addEventListener('blur', function (event) {
-    console.log('blur', event.target);
-}, true); //true - событие всплывает от элемента к родителю, false - от родителя к элементу
-
-
-element.addEventListener('focus', function (event) {
-    console.log('focus', event.target);
-}, true); //true - событие всплывает от элемента к родителю, false - от родителя к элементу
+//npm i json-server команда в терминале для установки json-server
+//json-server --watch db.json команда в терминале для запуска json-server
 
 
-document.addEventListener('focusin', function (event) { //focusin - событие всплывает от элемента к родителю, focus - событие не всплывает
-    console.log('focusin', event);
-} ); 
+//npx json-server db.json для запуска json-server
 
-document.addEventListener('focusout', function (event) { //focusout - событие всплывает от элемента к родителю, focus - событие не всплывает
-    console.log('focusout', event);
-}); 
-
-// чтобы узанть находится ли элемент в фокусе, можно использовать метод document.activeElement, который вернет элемент, на котором сейчас находится фокус. Если фокуса нет, то вернет body
-// document.activeElement - элемент, на котором сейчас находится фокус. иконка глаза в devtols -> console -> document.activeElement
-
-
-
-/**ФОРМЫ. ДОСТУП И ИЗМЕНА */
-
-
-document.forms // все формы на странице
-document.forms[0] // первая форма на странице
-document.forms[0].elements // все элементы формы
-document.forms[0].elements[0] // первый элемент формы
-
-document.querySelector('form') // первая форма на странице
-document.querySelector('form').elements // все элементы формы
-document.querySelector('form').elements[0] // первый элемент формы
-document.querySelector('form').elements[0].value // значение первого элемента формы
-document.querySelector('form').elements[0].name // имя первого элемента формы
-
-
-// чтобы привязать любой элемент к форме, нужно в теге (например select) указать form = "имя формы" или id = "имя формы"
-// <form name="myForm" id="myForm"> или <form id="myForm"> и <select form="myForm"> или <select id="myForm">. В этом случае элемент будет привязан к форме и будет отправляться вместе с формой при отправке формы. Если форма не указана, то элемент не будет отправляться с формой.
-// <input type="text" name="name" form="myForm"> или <input type="text" id="myForm">. В этом случае элемент будет привязан к форме и будет отправляться вместе с формой при отправке формы. Если форма не указана, то элемент не будет отправляться с формой.
-
-
-
-/** СБОР ДАННЫХ С ФОРМЫ ДЛЯ ОТПРАВКИ НА СЕРВЕР */
-
-
-const formElement = document.querySelector('form'); // получаем форму
-
-formElement.addEventListener('submit', (event)  => { // добавляем обработчик события submit на форму   
-
-    event.preventDefault(); // отменяем отправку формы, чтобы не перезагружать страницу
-
-    const formData = new FormData(formElement); // создаем объект FormData из формы
-
-
-    //так себе вариант кода ниже в коментариях, т.к. он не учитывает чекбоксы и радио-кнопки, которые могут быть выбраны или не выбраны
-
-    //  for (const element of formElement.elements) { // перебираем все элементы формы
-    //     if (!element.name) { // если у элемента нет имени, то пропускаем его
-    //        continue; // пропускаем элемент
-    //     }
-
-    //     if (element.type === 'checkbox') { // если элемент - чекбокс, то добавляем его значение в объект
-    //         formData[element.name] = element.checked; // добавляем в объект данные элемента
-    //         continue; // пропускаем элемент
-    //     } else {
-    //         formData[element.name] = element.value; // добавляем в объект данные элемента
-    //     }
-
-    //     if(element.type === 'radio' && !element.checked) { // если элемент - радио-кнопка и он не выбран, то пропускаем его
-    //         continue; // пропускаем элемент
-            
-    //     } 
-        
-    // } // добавляем в объект данные элемента
-    formData.append('name', 'someName'); // добавляем в объект данные элемента name
-    formData.append('email', formElement.elements.email.value); // добавляем в объект данные элемента email    
-
-    formData.get('name'); // получаем значение поля name из объекта FormData
-    formData.has('name'); // проверяем есть ли поле name в объекте FormData
-    formData.delete('name'); // удаляем поле name из объекта FormData
-
-    console.log(Object.formElement(formData)); // выводим объект с данными формы в консоль
-    
-    console.log(formData); // выводим объект FormData в консоль
-    console.log(formData.get('name')); // получаем значение поля name из объекта FormData
-    console.log(formData.get('email')); // получаем значение поля email из объекта FormData
-    console.log(formData.get('password')); // получаем значение поля password из объекта FormData
-})
+// весь код урока  https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbkRjWl8wTzRzdDlBOFFXRkhqc0tvcEJyREY0Z3xBQ3Jtc0tub0xjR040eGlJUVZtcXZhdEluaUpCbWJMU2xiSjh4VUtJS3gya0R4Mm1wUE9UekNrOUY5c3F2SlhRSEtnVnFpdmg2LXhBZ2ZFb0hDNFJHR3VScS11ZklQbHIzbkN2ZkFKWFFxV3BGRmNoZTg1SzVvTQ&q=https%3A%2F%2Fgithub.com%2Faleksanderlamkov%2Fjs-course&v=klVGCxWsN2A

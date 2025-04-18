@@ -41,4 +41,5 @@ fetch('http://localhost:3000/posts')
 
 //npx json-server db.json для запуска json-server
 
-// весь код урока  https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbkRjWl8wTzRzdDlBOFFXRkhqc0tvcEJyREY0Z3xBQ3Jtc0tub0xjR040eGlJUVZtcXZhdEluaUpCbWJMU2xiSjh4VUtJS3gya0R4Mm1wUE9UekNrOUY5c3F2SlhRSEtnVnFpdmg2LXhBZ2ZFb0hDNFJHR3VScS11ZklQbHIzbkN2ZkFKWFFxV3BGRmNoZTg1SzVvTQ&q=https%3A%2F%2Fgithub.com%2Faleksanderlamkov%2Fjs-course&v=klVGCxWsN2A
+// весь код урока  https://github.com/aleksanderlamkov/js-course
+

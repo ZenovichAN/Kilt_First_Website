@@ -1,10 +1,9 @@
 .container-block2-general {
     display: grid;
     grid-template-columns: repeat(6, 233px);
-    // grid-template-rows: repeat(2, 369px);
     grid-template-rows: 81px 369px 369px;
     border: solid 1px #6F6F6F;
-    background-color: var( --color-gray);
+    background-color: var(--color-gray);
     margin-left: 20px;
     margin-top: 120px;
     margin-right: 20px;
@@ -12,7 +11,6 @@
     .grid-0-head {
         grid-column: span 6;
         grid-row: span 1;
-
         border-bottom: solid 1px #6F6F6F;
         background: url(/images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
 
@@ -28,15 +26,11 @@
         border-left: none;
         border-top: none;
         display: grid;
-        grid-template: auto 50px / 233px; // короткая записть двух нижних строк
+        grid-template: auto 50px / 233px;
 
-        // grid-template-columns: 233px;
-        // grid-template-rows: 50px auto;
         .grid-1-image {
             background: url(/images/Image1-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {
@@ -51,9 +45,7 @@
         }
     }
 
-
     .grid-2 {
-        // border: solid 1px #6F6F6F;
         display: grid;
         grid-template: auto 50px / 233px; // короткая записть двух нижних строк
         // grid-template-columns: 233px;
@@ -70,8 +62,6 @@
         .grid-4-image {
             background: url(/images/Image2-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {
@@ -96,8 +86,6 @@
         .grid-6-image {
             background: url(/images/Image3-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {
@@ -123,8 +111,6 @@
         .grid-8-image {
             background: url(/images/Image4-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {
@@ -149,8 +135,6 @@
         .grid-9-image {
             background: url(/images/Image5-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {
@@ -174,8 +158,6 @@
         .grid-11-image {
             background: url(/images/Image6-block-two-general-Page.png);
             margin: 10px 10px;
-
-
         }
 
         h2 {

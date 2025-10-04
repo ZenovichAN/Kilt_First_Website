@@ -6,9 +6,6 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 120px;
-    // *{
-    //     border: var(--border);
-    // }
 }
 
 %paddings-font-size {
@@ -29,12 +26,12 @@
 .six-block-item1 {
     @extend %paddings-font-size;
     line-height: 1.1em;
-}
+    }
 
 .six-block-item2 {
     border-left: var(--border);
     border-right: var(--border);
-    
+
 }
 
 .six-block-item3 {
@@ -104,8 +101,6 @@
     grid-column: 1 / span 2;
     @extend %paddings-font-size-h2;
 }
-
-
 
 .six-block-item15 {
     border-top: var(--border);

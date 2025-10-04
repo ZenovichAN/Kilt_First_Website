@@ -11,7 +11,6 @@
     .item-head {
         grid-column: span 2;
         grid-row: span 1;
-
         border-bottom: solid 1px #6f6f6f;
         background: url(/images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
 
@@ -29,39 +28,32 @@
             url(/images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
 
         display: grid;
-        // grid-template: auto 50px / 233px; // короткая записть двух нижних строк
         justify-content: end;
         align-items: end;
 
         .item2-left-image {
             width: 213px;
             height: 270px;
-            // color: #D5D5D5;//213,213,213.0.5
-
             background: url(/images/Image1-block3-general.png) no-repeat;
             // background-size: 100% 100%;
             // background-color: rgba(83.53%, 83.53%, 83.53%, 0.5); I don't see changes with this rgb
             background-color: hsl(0, 0%, 97%);
             margin-right: 10px;
             margin-bottom: 10px;
-
             // align-items: stretch; //не выравнивает
-            // margin: 10px 10px;
+
         }
     }
 
     .item3-right {
         border-bottom: solid 1px #6f6f6f;
-
         display: grid;
-        // grid-template: auto 50px / 233px; // короткая записть двух нижних строк
         justify-content: end;
         align-items: end;
         background: url(/images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
 
         .item3-right-image {
             background: url(/images/Image2-block3-general.png) no-repeat;
-            // margin: 10px 10px;
             width: 213px;
             height: 270px;
             background-color: hsl(0, 0%, 97%);
@@ -70,41 +62,33 @@
         }
     }
 
+    %font-size-h2 {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 13px;
+    }
+
     .item4-left {
         border-top: solid 1px #6f6f6f;
         border-right: solid 1px #6f6f6f;
-
         display: grid;
-        // grid-template: auto 50px / 233px; // короткая записть двух нижних строк
 
         .item4-left-image {
             h2 {
-                font-size: 20px;
-                margin-left: 10px;
-                margin-top: 13px;
+                @extend %font-size-h2;
             }
-
-            // margin: 10px 10px;
         }
     }
+
     .item4-left {
-        // border: solid 1px #6F6F6F;
-
-        // display: grid;
-        // grid-template: auto 50px / 233px; // короткая записть двух нижних строк
         h2 {
-            font-size: 20px;
-            margin-left: 10px;
-            margin-top: 13px;
+            @extend %font-size-h2;
         }
     }
+
     .item5-right {
         h2 {
-            font-size: 20px;
-            margin-left: 10px;
-            margin-top: 13px;
+            @extend %font-size-h2;
         }
-
-        // margin: 10px 10px;
     }
 }

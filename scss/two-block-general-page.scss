@@ -12,7 +12,7 @@
         grid-column: span 6;
         grid-row: span 1;
         border-bottom: solid 1px #6F6F6F;
-        background: url(/images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
+        background: url(../images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
 
         h2 {
             font-size: 48px;
@@ -29,7 +29,7 @@
         grid-template: auto 50px / 233px;
 
         .grid-1-image {
-            background: url(/images/Image1-block-two-general-Page.png);
+            background: url(../images/Image1-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -37,7 +37,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-1-title {
@@ -50,7 +50,7 @@
         grid-template: auto 50px / 233px; // короткая записть двух нижних строк
         // grid-template-columns: 233px;
         // grid-template-rows: 50px auto;
-        background: url(/images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
+        background: url(../images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
     }
 
     .grid-4 {
@@ -60,7 +60,7 @@
         grid-template: auto 50px / 233px;
 
         .grid-4-image {
-            background: url(/images/Image2-block-two-general-Page.png);
+            background: url(../images/Image2-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -68,7 +68,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-4-title {
@@ -84,7 +84,7 @@
         grid-template: auto 50px / 233px;
 
         .grid-6-image {
-            background: url(/images/Image3-block-two-general-Page.png);
+            background: url(../images/Image3-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -92,7 +92,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-6-title {
@@ -104,12 +104,12 @@
         border: solid 1px #6F6F6F;
         border-right: none;
         border-bottom: none;
-        background: url(/images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
+        background: url(../images/Image-lineVertical-block-two-general-Page.png) right no-repeat;
         display: grid;
         grid-template: auto 50px / 233px;
 
         .grid-8-image {
-            background: url(/images/Image4-block-two-general-Page.png);
+            background: url(../images/Image4-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -117,7 +117,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-8-title {
@@ -133,7 +133,7 @@
         grid-template: auto 50px / 233px;
 
         .grid-9-image {
-            background: url(/images/Image5-block-two-general-Page.png);
+            background: url(../images/Image5-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -141,7 +141,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-9-title {
@@ -156,7 +156,7 @@
         grid-template: auto 50px / 233px;
 
         .grid-11-image {
-            background: url(/images/Image6-block-two-general-Page.png);
+            background: url(../images/Image6-block-two-general-Page.png);
             margin: 10px 10px;
         }
 
@@ -164,7 +164,7 @@
             margin-left: 10px;
             margin-top: 13px;
             font-size: 20px;
-            background: url(/images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
+            background: url(../images/Image-Line2-block-two-general-Page.png) 187px 5px no-repeat;
         }
 
         .grid-11-title {

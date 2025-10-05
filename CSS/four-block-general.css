@@ -21,7 +21,7 @@
   margin-left: 10px;
   margin-top: 10px;
   border: var(--border);
-  background: url(/images/Image1-block-four-general.png) no-repeat;
+  background: url(../images/Image1-block-four-general.png) no-repeat;
 }
 
 .block-right-center {
@@ -35,13 +35,13 @@
   margin-left: 10px;
   margin-top: 10px;
   border: var(--border);
-  background: url(/images/Image2-block-four-general-Page.png) no-repeat;
+  background: url(../images/Image2-block-four-general-Page.png) no-repeat;
 }
 
 .block-left-bottom {
   border: var(--border);
   border-left: none;
-  background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
+  background: url(../images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-left-bottom h2 {
   font-size: 20px;
@@ -53,7 +53,7 @@
   border: var(--border);
   border-left: none;
   border-right: none;
-  background: url(/images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
+  background: url(../images/Image-Line-block-two-general-Page.png) 610px 10px no-repeat;
 }
 .block-right-bottom h2 {
   font-size: 20px;

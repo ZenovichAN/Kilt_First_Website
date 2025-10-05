@@ -12,7 +12,7 @@
         grid-column: span 2;
         grid-row: span 1;
         border-bottom: solid 1px #6f6f6f;
-        background: url(/images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
+        background: url(../images/Image-Line-block-two-general-Page.png) 1300px 20px no-repeat;
 
         h2 {
             font-size: 48px;
@@ -24,8 +24,8 @@
     .item2-left {
         border-right: solid 1px #6f6f6f;
         background:
-            url(/images/Line-vertikal-block-tree-general-Page.png) 233px 0px no-repeat,
-            url(/images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
+            url(../images/Line-vertikal-block-tree-general-Page.png) 233px 0px no-repeat,
+            url(../images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
 
         display: grid;
         justify-content: end;
@@ -34,7 +34,7 @@
         .item2-left-image {
             width: 213px;
             height: 270px;
-            background: url(/images/Image1-block3-general.png) no-repeat;
+            background: url(../images/Image1-block3-general.png) no-repeat;
             // background-size: 100% 100%;
             // background-color: rgba(83.53%, 83.53%, 83.53%, 0.5); I don't see changes with this rgb
             background-color: hsl(0, 0%, 97%);
@@ -50,10 +50,10 @@
         display: grid;
         justify-content: end;
         align-items: end;
-        background: url(/images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
+        background: url(../images/Line-gorizontal-block-tree-general-Page.png) 0px 90px no-repeat;
 
         .item3-right-image {
-            background: url(/images/Image2-block3-general.png) no-repeat;
+            background: url(../images/Image2-block3-general.png) no-repeat;
             width: 213px;
             height: 270px;
             background-color: hsl(0, 0%, 97%);
